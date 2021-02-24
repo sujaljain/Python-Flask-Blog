@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="home-articleS max-width-1 m-auto my-30 font1">
+    <h2>Search Results for your <var>query </var>:- (0.2seconds)</h2>
+    <div class="year-box adjust-year-box">
+        <h3>Filter by Year</h3>
+        <div class="year-input">
+            <input type="radio" name="year" id="">2020
+            <input type="radio" name="year" id="">2021
+            <input type="radio" name="year" id="">Random
+        </div>
+    </div>
+    <div class="home-article">
+        <h2>1.)</h2>
+        <div class="home-article-image">
+            <a href="/blogpost">
+                <img src="{{ url_for('static', filename = 'images/newspaper.jpg') }}" alt="article-image">
+            </a>
+        </div>
+        <div class="home-article-content font1">
+            <a href="/blogpost">
+                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+            </a>
+            <div>By - (Author Name)</div>
+            <span> 17 April | 4min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <h2>2.)</h2>
+        <div class="home-article-image">
+            <a href="/blogpost">
+                <img src="{{ url_for('static', filename = 'images/home.svg') }}" alt="article-image">
+            </a>
+        </div>
+        <div class="home-article-content font1">
+            <a href="/blogpost">
+                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+            </a>
+            <div>By - (Author Name)</div>
+            <span> 17 April | 4min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <h2>3.)</h2>
+        <div class="home-article-image">
+            <a href="/blogpost">
+                <img src="{{ url_for('static', filename = 'images/icon-image.jpg') }}" alt="article-image">
+            </a>
+        </div>
+        <div class="home-article-content font1">
+            <a href="/blogpost">
+                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+            </a>
+            <div>By - (Author Name)</div>
+            <span> 17 April | 4min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <h2>4.)</h2>
+        <div class="home-article-image">
+            <a href="/blogpost">
+                <img src="{{ url_for('static', filename = 'images/blog.jpg') }}" alt="article-image">
+            </a>
+        </div>
+        <div class="home-article-content font1">
+            <a href="/blogpost">
+                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+            </a>
+            <div>By - (Author Name)</div>
+            <span> 17 April | 4min read</span>
+        </div>
+    </div>
+    <div class="home-article">
+        <h2>5.)</h2>
+        <div class="home-article-image">
+            <a href="/blogpost">
+                <img src="{{ url_for('static', filename = 'images/social-media-keywords.jpg') }}" alt="article-image">
+            </a>
+        </div>
+        <div class="home-article-content font1">
+            <a href="/blogpost">
+                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+            </a>
+            <div>By - (Author Name)</div>
+            <span> 17 April | 4min read</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

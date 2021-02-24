@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<style>
+    .form-box input,
+    textarea {
+        font-size: 17px;
+    }
+</style>
+
+<div class="contact-content max-width-1 m-auto my-30 font1">
+    <div id="h2">
+        <h2>No worries! Feel Free to Contact Us</h2>
+        <hr>
+    </div>
+
+    <form class="contact-form  my-30" action="/contact" method="POST">
+        <div class="form-box">
+            <!-- <label>Enter Your Name :-</label> -->
+            <input type="text" name="fname" placeholder="First Name">
+            <input type="text" name="lname" placeholder="Last Name">
+        </div>
+        <div class="form-box">
+            <!-- <label>Enter Your Email Address :-</label> -->
+            <input type="text" name="email" placeholder="Email Address">
+        </div>
+        <div class="form-box">
+            <!-- <label>Enter Your Mobile Number :-</label> -->
+            <input type="text" name="phone" placeholder="Contact Number">
+        </div>
+        <div class="form-box">
+            <!-- <label>Please Describe Your Concern</label> -->
+            <textarea class="TextArea" name="msg" placeholder="Please Elaborate Your Concern"></textarea>
+        </div>
+        <div class="form-box-2" id="Check-Box">
+            <input type="checkbox">
+            <label><a href="/index.html">I Accept All The Terms & Conditions of weblog.com</a></label>
+        </div>
+        <div class="form-box-3">
+            <input type="submit" class="Submit-btn">
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="content max-width-1 m-auto my-30">
+    <div class="content-left">
+        <h1>Add/Edit Post</h1>
+    </div>
+</div>
+
+<div class="max-width-1 m-auto">
+    <hr>
+</div>
+<!-- TABLES -->
+<style>
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #customers td,
+    #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #333333;
+        color: white;
+    }
+
+    .form-box input,
+    textarea {
+        font-size: 20px;
+    }
+
+    .btn-2 {
+        font-family: var(--font1);
+        font-size: 16.5px;
+        padding: 0 2px;
+        border: 1px solid black;
+        border-radius: 7px;
+        height: 32px;
+        width: 55px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        outline: none;
+    }
+
+    .btn-2:hover {
+        color: white;
+        background-color: var(--main-bg-color);
+    }
+
+    .basic_buttons {
+        margin-left: 10px;
+    }
+
+    .basic_buttons-btn {
+        font-family: var(--font1);
+        font-size: 16.5px;
+        padding: 0 2px;
+        border: 1px solid black;
+        border-radius: 7px;
+        height: 32px;
+        width: 150px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        outline: none;
+        margin-top: 6px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .basic_buttons-btn:hover {
+        color: white;
+        background-color: var(--main-bg-color);
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="file-uploader max-width-1 m-auto my-30">
+        <div class="basic_buttons">
+            <h1>Basic Actions</h1>
+            <a href="/dashboard"><button class="basic_buttons-btn">Dashboard Home</button></a>
+            <a href="/logout"><button class="basic_buttons-btn">Logout</button></a>
+        </div>
+        <hr>
+        <h1>Upload A File Here</h1>
+        <hr>
+    </div>
+    <div class="form max-width-1 m-auto my-30">
+        <form class="contact-form" action="/edit/{{post.sno}}" method="POST">
+            <div class="form-box">
+                <!-- <label>  Image File  </label> -->
+                <input type="text" name="img_file" placeholder="Image Filename" value={{post.img_file}}>
+            </div>
+            <div class="form-box">
+                <!-- <label>  Title  </label> -->
+                <input type="text" name="title" placeholder="Title" value={{post.title}}>
+            </div>
+            <div class="form-box">
+                <!-- <label>  Slug  </label> -->
+                <input type="text" name="slug" placeholder="Slug" value={{post.slug}}>
+            </div>
+            <div class="form-box">
+                <!-- <label>  Content  </label> -->
+                <textarea class="TextArea" name="content" placeholder="Content">{{post.content}}</textarea>
+            </div>
+            <div class="form-box-3">
+                <input type="submit" class="Submit-btn">
+            </div>
+        </form>
+    </div>
+    {% endblock %}

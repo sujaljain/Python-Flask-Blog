@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="content max-width-1 m-auto my-30">
+    <div class="content-left">
+        <h1>The Paradise of Bloggers</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sunt doloremque, voluptate debitis neque quas harum amet
+            consequuntur culpa! Commodi ab ex amet quam illo. Soluta, non!
+            Dolor doloremque cumque facilis illum, quidem porro quis laudan
+            tium veniam dolorem suscipit minus reiciendis quasi, volupt
+            atibus beatae corrupti, expedita tempora. Dolor nam q
+            uibusdam velit modi, voluptates ullam fugit natus suscipit
+            delectus ipsa commodi animi?</p>
+        <p>Hope you will have a wonderful journey ahead! :)</p>
+    </div>
+    <div class="content-right">
+        <a href="{{ url_for('static', filename = 'images/bg-image.jpg') }}">
+            <img src="{{ url_for('static', filename = 'images/bg-image.jpg') }}" alt="home-image">
+        </a>
+    </div>
+</div>
+
+<div class="max-width-1 m-auto">
+    <hr>
+</div>
+
+<div class="home-articleS m-auto my-30 font1">
+    <div class="year-box">
+        <!-- <h3>Filter by Year</h3>
+            <div class="year-input">
+                <input type="radio" name="year" id="">2020
+                <input type="radio" name="year" id="">2021
+                <input type="radio" name="year" id="">Random
+            </div> -->
+    </div>
+    <div class="Featured-Articles">
+        <h2>Featured Articles</h2>
+    </div>
+
+    <!-- Fetching the posts using for loop from the database -->
+    {% for post in posts %}
+    
+        {% set imgUrl = 'images/' + post.img_file %}
+    <div class="home-article">
+        <!-- <span>{{post}}</span> -->
+        <div class="home-article-image">
+            <a href="/blogpost/{{post.slug}}">
+                <img src="{{ url_for('static', filename=imgUrl) }}" alt="article-image">
+            </a>
+        </div>
+        <div class="home-article-content font1">
+            <a href="/blogpost/{{post.slug}}">
+                <h3>{{post.title}}.</h3>
+            </a>
+            <div class="small-content">
+                <span>{{post.content[0:100]}}...</span>
+            </div>
+            <span> {{post.date}} | 4min read</span>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="more max-width-1 my-30 m-auto">
+        <div class="previous">
+            <a href="{{prev}}" class="btn">&larr; Previous</a>
+        </div>
+        <div class="next">
+            <a href="{{next}}" class="btn">Next &rarr;</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

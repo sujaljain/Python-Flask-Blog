@@ -1,0 +1,16 @@
+{
+    "parameters":
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/weblog",
+        "production_uri": "mysql://root:@localhost/weblog",
+        "fb_url": "https://www.facebook.com/",
+        "website_name": "weblog",
+        "gmail_user": "yenl8972@ssajks.com",
+        "gmail_password": "nytbytuyb",
+        "no_of_posts": 2,
+        "admin_username": "sujal",
+        "admin_password": "root",
+        "upload_location": "C:\\Users\\SUJAL JAIN\\Desktop\\WEB DEVELOPMENT\\Flask\\Basics\\static\\images"
+    }
+}
