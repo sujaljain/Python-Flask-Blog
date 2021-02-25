@@ -133,7 +133,7 @@ def edit(sno):
                 return redirect('/edit/' + sno)
         post = Posts.query.filter_by(sno=sno).first()
 
-        return render_template('edit.html', parameters=parameters, post=post)
+        return render_template('edit.html', parameters=parameters, post=post, sno=sno)
 
 
 @app.route('/contact', methods=['GET', 'POST'])
