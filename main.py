@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 from werkzeug.utils import secure_filename
@@ -56,6 +56,8 @@ class Posts(db.Model):
 
 @app.route('/')
 def home():
+    flash("Welcome To weblog.com! We are glad to see you here:", "success")
+    flash("Thanks for showing your support to us..", "primary")
     # Pagination Logic
     '''
     First Page
